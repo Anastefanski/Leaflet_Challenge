@@ -45,14 +45,14 @@ function createMap(earthquakes) {
         attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"http://mapbox.com\">Mapbox</a>",
         maxZoom: 18,
         id: "mapbox.light",
-        accessToken: "pk.eyJ1IjoiYW5hc3RlZmFuc2tpIiwiYSI6ImNrdTFhcnhuNjBxNmoydm13MTJxcmJiOWwifQ.LGG80BeSdMH6ZrPnO1AyOQ"
+        accessToken: "API_KEY"
     });
 
     var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}", {
         attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"http://mapbox.com\">Mapbox</a>",
         maxZoom: 18,
         id: "mapbox.light",
-        accessToken: "pk.eyJ1IjoiYW5hc3RlZmFuc2tpIiwiYSI6ImNrdTFhcnhuNjBxNmoydm13MTJxcmJiOWwifQ.LGG80BeSdMH6ZrPnO1AyOQ"
+        accessToken: "API_KEY"
     });
  
     var baseMaps = {
