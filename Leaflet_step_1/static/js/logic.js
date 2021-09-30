@@ -20,9 +20,9 @@ streetmap.addTo(myMap);
 // Store our API endpoint
 var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 // Perform a GET request to the query URL
-d3.json(queryUrl, function(data) {
+d3.json(queryUrl).then (function(data) {
   function styleMap(feature) {
-    
+    console.log(feature)
     return {
       opacity: 1,
       fillOpacity: 1,
@@ -33,9 +33,10 @@ d3.json(queryUrl, function(data) {
       weight: 0.5
     };
   }
-  console.log(feature)
+  
     // changing color based on magnitude of the earthquakes
     function getColor(coordinates) {
+      console.log(coordinates)
     switch (true) {
     case coordinates < 10:
       return "#B22222";
@@ -51,7 +52,7 @@ d3.json(queryUrl, function(data) {
       return "#000080";
     }
   }
-  console.log(coordinates)
+  
     // get radius from magnitude and amplify
     function getRadius(mag) {
     if (mag === 0) {
